@@ -1,0 +1,49 @@
+body {
+  text-align: center;
+}
+
+#logo {
+  width: 400px;
+}
+
+.new {
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.new > input {
+  line-height: 30px;
+  width: 350px;
+  border-radius: 10px;
+  padding: 0 10px;
+}
+
+.new > button {
+  margin-left: 10px;
+  line-height: 30px;
+  border-radius: 10px;
+  padding: 0 10px;
+  background-color: #F5F7F7;
+}
+
+.todo {
+  background-color: #F5F7F7;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: auto;
+  padding: 10px;
+}
+
+.item {
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px;
+  font-size: 20px;
+  border-bottom: 1px solid grey;
+  display: flex;
+  justify-content: space-between;
+}
+
+.item > i:hover {
+  cursor: pointer;
+}

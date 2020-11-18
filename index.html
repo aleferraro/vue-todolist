@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>To Do List</title>
+
+    <!-- Frameworks CSS -->
+
+    <!-- Font Awesome 5.15.1 (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+    <!-- Frameworks JavaScript -->
+
+    <!-- Vue 2.6.12 Local File -->
+    <script src="libs/vue.js"></script>
+
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+  <body>
+    <img id="logo" src="https://www.boolean.careers/images/misc/logo.png" alt="">
+    <div id="root">
+      <div class="new">
+        <input v-on:keyup.enter="addTodo" v-model="newTodo" type="text" name="" placeholder="Nuovo Todo">
+        <button @click="addTodo">Aggiungi</button>
+      </div>
+      <div v-if="todoList.length > 0" class="todo">
+        <div v-for="(todo, index) in todoList" class="item">
+          {{ todo }}
+          <i @click="deleteTodo(index)" class="fas fa-times"></i>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Custom JavaScript -->
+    <script src="js/main.js" charset="utf-8"></script>
+  </body>
+</html>
