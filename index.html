@@ -27,9 +27,9 @@
         <button @click="addTodo">Aggiungi</button>
       </div>
       <div v-if="todoList.length > 0" class="todo">
-        <div v-for="(todo, index) in todoList" class="item">
+        <div v-for="(todo, index) in todoList" :key="index" @click="checkTodo(index)" class="item" :class="{done: actives[index]}">
           {{ todo }}
-          <i @click="deleteTodo(index)" class="fas fa-times"></i>
+          <i @click.stop="deleteTodo(index)" class="fas fa-times"></i>
         </div>
       </div>
     </div>

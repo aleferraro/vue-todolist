@@ -40,10 +40,15 @@ body {
   padding: 10px;
   font-size: 20px;
   border-bottom: 1px solid grey;
+  border-radius: 5px;
   display: flex;
   justify-content: space-between;
 }
 
 .item > i:hover {
   cursor: pointer;
+}
+
+.done {
+  background-color: green;
 }

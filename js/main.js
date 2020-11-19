@@ -13,12 +13,14 @@ const todoListApp = new Vue({
   el: '#root',
   data: {
     todoList: [],
-    newTodo: ''
+    newTodo: '',
+    actives: []
   },
   methods: {
     addTodo(){
       if(this.newTodo.length > 0){
       this.todoList.push(this.newTodo.charAt(0).toUpperCase() + this.newTodo.slice(1));
+      this.actives.push(  false);
       this.newTodo = '';
       } else {
         alert('Devi scrivere qualcosa')
@@ -26,6 +28,10 @@ const todoListApp = new Vue({
     },
     deleteTodo(delIndex){
       this.todoList.splice(delIndex, 1);
+      this.actives.splice(delIndex, 1);
+    },
+    checkTodo(index){
+      Vue.set(this.actives, index, !this.actives[index]);
     }
   }
 })
